@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react_portfolio/static/css/main.4bdc2b11.css",
-    "main.js": "/react_portfolio/static/js/main.9da2e59a.js",
-    "static/media/image8.png": "/react_portfolio/static/media/image8.1ed3c817441bec21078d.png",
-    "static/media/image3.png": "/react_portfolio/static/media/image3.f833862bd814f1db8bf3.png",
-    "static/media/image4.png": "/react_portfolio/static/media/image4.53fe3343907914a8e66c.png",
-    "static/media/image7.jpg": "/react_portfolio/static/media/image7.ab7e0bef74716285eadc.jpg",
-    "static/media/image2.jpg": "/react_portfolio/static/media/image2.7114660fe5dd10f49760.jpg",
-    "static/media/image6.jpg": "/react_portfolio/static/media/image6.a6a7fad00ee3746ee1ef.jpg",
-    "static/media/image1.jpg": "/react_portfolio/static/media/image1.3badf664eed614f51009.jpg",
-    "static/media/image5.jpeg": "/react_portfolio/static/media/image5.a0b1b363811ca434c5f4.jpeg",
-    "static/media/logo.svg": "/react_portfolio/static/media/logo.cb740aefc7dcc39ca63c71e96ad089ef.svg",
-    "index.html": "/react_portfolio/index.html",
-    "main.4bdc2b11.css.map": "/react_portfolio/static/css/main.4bdc2b11.css.map",
-    "main.9da2e59a.js.map": "/react_portfolio/static/js/main.9da2e59a.js.map"
+    "main.css": "/static/css/main.4bdc2b11.css",
+    "main.js": "/static/js/main.20fbb14a.js",
+    "static/media/image8.png": "/static/media/image8.1ed3c817441bec21078d.png",
+    "static/media/image3.png": "/static/media/image3.f833862bd814f1db8bf3.png",
+    "static/media/image4.png": "/static/media/image4.53fe3343907914a8e66c.png",
+    "static/media/image7.jpg": "/static/media/image7.ab7e0bef74716285eadc.jpg",
+    "static/media/image2.jpg": "/static/media/image2.7114660fe5dd10f49760.jpg",
+    "static/media/image6.jpg": "/static/media/image6.a6a7fad00ee3746ee1ef.jpg",
+    "static/media/image1.jpg": "/static/media/image1.3badf664eed614f51009.jpg",
+    "static/media/image5.jpeg": "/static/media/image5.a0b1b363811ca434c5f4.jpeg",
+    "static/media/logo.svg": "/static/media/logo.cb740aefc7dcc39ca63c71e96ad089ef.svg",
+    "index.html": "/index.html",
+    "main.4bdc2b11.css.map": "/static/css/main.4bdc2b11.css.map",
+    "main.20fbb14a.js.map": "/static/js/main.20fbb14a.js.map"
   },
   "entrypoints": [
     "static/css/main.4bdc2b11.css",
-    "static/js/main.9da2e59a.js"
+    "static/js/main.20fbb14a.js"
   ]
 }
