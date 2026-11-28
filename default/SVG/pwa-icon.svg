@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="pwaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b00"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0b0f19"/>
+  <rect x="24" y="24" width="464" height="464" rx="92" fill="url(#pwaGrad)" fill-opacity="0.14" stroke="#ff6b00" stroke-width="12"/>
+  <text x="256" y="348" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="280" font-weight="800" fill="#ff6b00" text-anchor="middle">A</text>
+</svg>

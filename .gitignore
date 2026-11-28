@@ -1,5 +1,17 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Vercel
+.vercel/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local scratch & test files
 test.md
-
-
-
+*.log

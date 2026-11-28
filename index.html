@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" data-accent="orange">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,10 @@
     <meta property="og:description" content="I can help you build a product, feature or website. Look through some of my work and experience!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tajemouti.github.io/">
-    <meta property="og:image" content="default/SVG/Snapshoot Portfolio.svg">
+    <meta property="og:image" content="default/SVG/projects/project-ecommerce.svg">
+    <meta id="meta-theme-color" name="theme-color" content="#ff6b00">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="default/SVG/pwa-icon.svg">
     <link
       id="dynamic-favicon"
       rel="icon"
@@ -24,7 +27,7 @@
     <title>Ajrass Portfolio | Software Developer</title>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip_link">Skip to main content</a>
 
     <header class="site-header" id="top">
       <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
@@ -37,13 +40,13 @@
         <nav id="nav-bar" class="site-nav" aria-label="Primary Navigation">
           <ul class="nav-links" id="nav-links">
             <li class="nav-item">
-              <a class="nav-link" data-scramble href="#projects-section">Projects</a>
+              <a class="nav-link" data-scramble data-i18n="nav_projects" href="#projects-section">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-scramble href="#about-me-section">About</a>
+              <a class="nav-link" data-scramble data-i18n="nav_about" href="#about-me-section">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-scramble href="#form-section">Contact</a>
+              <a class="nav-link" data-scramble data-i18n="nav_contact" href="#form-section">Contact</a>
             </li>
             <li class="nav-item nav-mail-item">
               <a class="nav-mail-link" href="#form-section" aria-label="Contact via email form">
@@ -54,6 +57,69 @@
         </nav>
 
         <div class="header-actions">
+          <button
+            id="lang-toggle"
+            class="header-action-pill"
+            type="button"
+            aria-label="Switch language between English and French"
+            title="Switch Language (EN / FR)"
+          >
+            <span id="lang-toggle-text" class="lang-toggle-text">EN</span>
+          </button>
+
+          <div class="music-jukebox-wrapper" id="music-jukebox-wrapper">
+            <button
+              id="music-toggle"
+              class="header-icon-btn music-toggle-btn"
+              type="button"
+              aria-label="Open MIDI Synth Jukebox or toggle music"
+              aria-expanded="false"
+              aria-controls="music-jukebox-popover"
+              aria-pressed="false"
+              title="Synthwave / Cyberpunk Jukebox (8 Tracks ♪)"
+            >
+              <span class="music-icon-note" aria-hidden="true">♪</span>
+              <span class="music-eq-bars" aria-hidden="true">
+                <span class="music-eq-bar"></span>
+                <span class="music-eq-bar"></span>
+                <span class="music-eq-bar"></span>
+              </span>
+            </button>
+
+            <div
+              id="music-jukebox-popover"
+              class="music-jukebox-popover"
+              role="region"
+              aria-label="Procedural MIDI Jukebox Track Selector"
+              aria-hidden="true"
+            >
+              <div class="jukebox-header">
+                <div class="jukebox-title-col">
+                  <span class="jukebox-eyebrow">Web Audio MIDI Synth</span>
+                  <strong id="jukebox-now-playing" class="jukebox-now-playing">Paused — Select Track</strong>
+                </div>
+                <div class="jukebox-transport">
+                  <button id="jukebox-prev" class="jukebox-ctrl-btn" type="button" aria-label="Previous track" title="Previous Track">⏮</button>
+                  <button id="jukebox-play" class="jukebox-ctrl-btn jukebox-play-btn" type="button" aria-label="Play or pause music" title="Play / Pause">▶</button>
+                  <button id="jukebox-next" class="jukebox-ctrl-btn" type="button" aria-label="Next track" title="Next Track">⏭</button>
+                </div>
+              </div>
+              <ul id="jukebox-track-list" class="jukebox-track-list" role="listbox" aria-label="8 Synthwave and Chiptune Tracks"></ul>
+            </div>
+          </div>
+
+          <button
+            id="sound-toggle"
+            class="header-icon-btn"
+            type="button"
+            aria-label="Toggle UI micro-sound effects"
+            aria-pressed="false"
+            title="Toggle UI Sound Effects"
+          >
+            <span class="sound-icon-on" aria-hidden="true">🔊</span>
+            <span class="sound-icon-off" aria-hidden="true">🔇</span>
+          </button>
+
           <button
             id="theme-toggle"
             class="theme-toggle"
@@ -97,26 +163,26 @@
           </div>
 
           <nav class="mobile-drawer-nav" aria-label="Mobile Navigation">
-            <p class="mobile-nav-eyebrow">Navigation</p>
+            <p class="mobile-nav-eyebrow" data-i18n="drawer_nav_eyebrow">Navigation</p>
             <ul id="mobile-nav-bar" class="mobile-nav-list">
               <li class="mobile-nav-link" style="--drawer-item-index: 0;">
                 <a class="mobile-drawer-link" href="#projects-section">
                   <span class="mobile-link-index" aria-hidden="true">01</span>
-                  <span class="mobile-link-label">Projects</span>
+                  <span class="mobile-link-label" data-i18n="nav_projects">Projects</span>
                   <span class="mobile-link-arrow" aria-hidden="true">→</span>
                 </a>
               </li>
               <li class="mobile-nav-link" style="--drawer-item-index: 1;">
                 <a class="mobile-drawer-link" href="#about-me-section">
                   <span class="mobile-link-index" aria-hidden="true">02</span>
-                  <span class="mobile-link-label">About</span>
+                  <span class="mobile-link-label" data-i18n="nav_about">About</span>
                   <span class="mobile-link-arrow" aria-hidden="true">→</span>
                 </a>
               </li>
               <li class="mobile-nav-link" style="--drawer-item-index: 2;">
                 <a class="mobile-drawer-link" href="#form-section">
                   <span class="mobile-link-index" aria-hidden="true">03</span>
-                  <span class="mobile-link-label">Contact</span>
+                  <span class="mobile-link-label" data-i18n="nav_contact">Contact</span>
                   <span class="mobile-link-arrow" aria-hidden="true">→</span>
                 </a>
               </li>
@@ -125,7 +191,7 @@
 
           <div class="mobile-menu-footer" style="--drawer-item-index: 3;">
             <div class="mobile-theme-row">
-              <span class="mobile-theme-label">Appearance</span>
+              <span class="mobile-theme-label" data-i18n="drawer_appearance">Appearance</span>
               <button
                 id="mobile-theme-toggle"
                 class="mobile-theme-switch"
@@ -137,8 +203,59 @@
                 <span class="mobile-theme-mode-text" id="mobile-theme-text">Light</span>
               </button>
             </div>
+
+            <div class="mobile-theme-row">
+              <span class="mobile-theme-label" data-i18n="drawer_accent">Accent</span>
+              <div class="accent-picker" role="group" aria-label="Select accent color palette">
+                <button class="accent-dot is-active" type="button" data-accent-choice="orange" aria-label="Solar Orange accent" title="Solar Orange"></button>
+                <button class="accent-dot" type="button" data-accent-choice="cyan" aria-label="Cyber Cyan accent" title="Cyber Cyan"></button>
+                <button class="accent-dot" type="button" data-accent-choice="emerald" aria-label="Emerald Pulse accent" title="Emerald Pulse"></button>
+                <button class="accent-dot" type="button" data-accent-choice="violet" aria-label="Royal Violet accent" title="Royal Violet"></button>
+              </div>
+            </div>
+
+            <div class="mobile-theme-row">
+              <span class="mobile-theme-label" data-i18n="drawer_preferences">Audio &amp; Lang</span>
+              <div class="mobile-pref-actions">
+                <button
+                  id="mobile-music-toggle"
+                  class="mobile-mini-pill"
+                  type="button"
+                  aria-label="Toggle retro-synth background music"
+                >
+                  <span id="mobile-music-text">♪ BGM</span>
+                </button>
+                <button
+                  id="mobile-sound-toggle"
+                  class="mobile-mini-pill"
+                  type="button"
+                  aria-label="Toggle UI sound effects"
+                >
+                  <span id="mobile-sound-text">🔇 Off</span>
+                </button>
+                <button
+                  id="mobile-lang-toggle"
+                  class="mobile-mini-pill"
+                  type="button"
+                  aria-label="Switch language between English and French"
+                >
+                  <span id="mobile-lang-text">EN / FR</span>
+                </button>
+                <button
+                  id="mobile-pwa-install-btn"
+                  class="mobile-mini-pill pwa-install-mobile"
+                  type="button"
+                  aria-label="Install portfolio as Progressive Web App"
+                  hidden
+                >
+                  <span aria-hidden="true">⬇</span>
+                  <span data-i18n="pwa_install_btn">Install App</span>
+                </button>
+              </div>
+            </div>
+
             <a class="btn-primary mobile-drawer-cta" href="#form-section">
-              <span>Let's Talk</span>
+              <span data-i18n="drawer_cta">Let's Talk</span>
               <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -151,25 +268,28 @@
         <canvas id="hero-particles" class="hero-particles" aria-hidden="true"></canvas>
         <div class="hero-container">
           <div class="headline">
-            <p class="hero-badge hero-animate" data-scramble style="--hero-delay: 0.05s;">Available for new opportunities</p>
+            <p class="hero-badge hero-animate" data-scramble data-i18n="hero_badge" style="--hero-delay: 0.05s;">Available for new opportunities</p>
             <h1 id="hero-title" class="hello">
               <span class="title-mask">
-                <span class="title-line" style="--line-delay: 0.12s;">Hey There.</span>
+                <span class="title-line" data-i18n="hero_greeting" style="--line-delay: 0.12s;">Hey There.</span>
               </span>
               <span class="title-mask">
-                <span class="title-line" style="--line-delay: 0.24s;">I'm <span class="text-shimmer">Ajrass.</span></span>
+                <span class="title-line" style="--line-delay: 0.24s;"><span data-i18n="hero_im">I'm</span> <span class="text-shimmer">Ajrass.</span></span>
               </span>
             </h1>
             <h2 class="iam hero-animate" style="--hero-delay: 0.34s;">
-              <span id="hero-role-text" data-scramble>I'm a Software Developer</span>
+              <span id="hero-role-text" data-scramble data-i18n="hero_role">I'm a Software Developer</span>
               <span class="role-cursor" aria-hidden="true"></span>
             </h2>
-            <p class="description hero-animate" style="--hero-delay: 0.42s;">
+            <p class="description hero-animate" data-i18n="hero_description" style="--hero-delay: 0.42s;">
               I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.
             </p>
             <div class="hero-cta-group hero-animate" style="--hero-delay: 0.5s;">
-              <a class="btn-primary magnetic" href="#projects-section">View Projects</a>
-              <a class="btn-secondary magnetic" href="#form-section">Get in Touch</a>
+              <a class="btn-primary magnetic" data-i18n="hero_cta_projects" href="#projects-section">View Projects</a>
+              <a class="btn-secondary magnetic" data-i18n="hero_cta_contact" href="#form-section">Get in Touch</a>
+            </div>
+            <div class="print-only-contact" aria-hidden="true">
+              Morocco (GMT+1) • tajemouti@gmail.com • github.com/tajemouti • linkedin.com/in/ajrass
             </div>
           </div>
 
@@ -186,7 +306,7 @@
         </div>
 
         <a class="scroll-indicator" href="#projects-section" aria-label="Scroll down to projects">
-          <span class="scroll-indicator-text">Scroll</span>
+          <span class="scroll-indicator-text" data-i18n="scroll_label">Scroll</span>
           <span class="scroll-indicator-mouse" aria-hidden="true">
             <span class="scroll-indicator-wheel"></span>
           </span>
@@ -202,12 +322,17 @@
           <div class="about-header-grid">
             <div class="about-intro reveal">
               <h2 id="about-heading" class="about-me-heading heading-reveal">
-                <span class="heading-reveal-text">About me</span>
+                <span class="heading-reveal-text" data-i18n="about_heading">About me</span>
               </h2>
-              <p class="about-me-description">
+              <p class="about-me-description" data-i18n="about_description">
                 Hello I'm a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.
               </p>
-              <a class="btn-primary larger magnetic" href="#form-section">Get my resume</a>
+              <div class="about-cta-group">
+                <button id="print-cv-btn" class="btn-primary magnetic" type="button" aria-label="Download or Print ATS-friendly CV">
+                  <span aria-hidden="true">⎙</span>
+                  <span data-i18n="about_print_cv">Save as CV / PDF</span>
+                </button>
+              </div>
             </div>
 
             <div class="about-visual reveal" aria-hidden="true">
@@ -222,11 +347,53 @@
             </div>
           </div>
 
+          <aside class="github-pulse-card reveal" id="github-pulse-card" aria-label="Live GitHub Activity">
+            <div class="github-pulse-header">
+              <div class="github-pulse-brand">
+                <span class="github-pulse-dot" aria-hidden="true"></span>
+                <span class="github-pulse-title" data-i18n="gh_pulse_title">Live GitHub Pulse</span>
+                <a class="github-pulse-handle" href="https://github.com/tajemouti" target="_blank" rel="noopener noreferrer">@tajemouti ↗</a>
+              </div>
+              <span class="github-pulse-status" id="gh-pulse-updated" data-i18n="gh_pulse_synced">Synced with GitHub API</span>
+            </div>
+            <div class="github-pulse-grid">
+              <div class="github-stat-box">
+                <span class="github-stat-label" data-i18n="gh_repos_label">Public Repos</span>
+                <strong class="github-stat-value" id="gh-stat-repos">38+</strong>
+              </div>
+              <div class="github-stat-box">
+                <span class="github-stat-label" data-i18n="gh_followers_label">Community &amp; Stars</span>
+                <strong class="github-stat-value" id="gh-stat-followers">65+ Followers</strong>
+              </div>
+              <div class="github-stat-box github-stat-latest">
+                <span class="github-stat-label" data-i18n="gh_latest_label">Latest Active Repository</span>
+                <a
+                  id="gh-latest-repo"
+                  class="github-latest-link"
+                  href="https://github.com/tajemouti/tajemouti.github.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  tajemouti.github.io • Active
+                </a>
+              </div>
+              <div class="github-stat-box github-stat-langs">
+                <span class="github-stat-label" data-i18n="gh_langs_label">Top Detected Stack</span>
+                <div class="github-lang-pills" id="gh-lang-pills">
+                  <span class="github-lang-pill">JavaScript</span>
+                  <span class="github-lang-pill">TypeScript</span>
+                  <span class="github-lang-pill">Ruby</span>
+                  <span class="github-lang-pill">HTML/CSS</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
           <div class="skills" aria-label="Technical Skills">
             <article class="skill-card reveal" style="--stagger-index: 0;">
               <div class="skill-heading">
                 <img src="default/SVG/Rectangle55.svg" alt="Diamond icon">
-                <h3>Language</h3>
+                <h3 data-i18n="skill_cat_lang">Language</h3>
               </div>
               <ul class="skill">
                 <li class="skill-list">JavaScript</li>
@@ -239,7 +406,7 @@
             <article class="skill-card reveal" style="--stagger-index: 1;">
               <div class="skill-heading">
                 <img src="default/SVG/Rectangle56.svg" alt="Square icon">
-                <h3>Frameworks</h3>
+                <h3 data-i18n="skill_cat_fw">Frameworks</h3>
               </div>
               <ul class="skill">
                 <li class="skill-list">React.js</li>
@@ -252,7 +419,7 @@
             <article class="skill-card reveal" style="--stagger-index: 2;">
               <div class="skill-heading">
                 <img src="default/SVG/Rectangle57.svg" alt="Circle icon">
-                <h3>Skills</h3>
+                <h3 data-i18n="skill_cat_skills">Skills</h3>
               </div>
               <ul class="skill">
                 <li class="skill-list">Database Management</li>
@@ -269,9 +436,9 @@
       <section id="form-section" class="contact-section" aria-labelledby="contact-heading">
         <div class="contact-container">
           <div class="contact-copy reveal">
-            <span class="section-eyebrow">Let's Connect</span>
+            <span class="section-eyebrow" data-i18n="contact_eyebrow">Let's Connect</span>
             <h2 id="contact-heading" class="form-heading heading-reveal">
-              <span class="heading-reveal-text">
+              <span class="heading-reveal-text" data-i18n="contact_heading">
                 I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
               </span>
             </h2>
@@ -285,27 +452,28 @@
               >
                 <span class="copy-email-dot" aria-hidden="true"></span>
                 <span class="copy-email-address">tajemouti@gmail.com</span>
-                <span class="copy-email-badge" id="copy-email-badge">Copy Email ⧉</span>
+                <span class="copy-email-badge" id="copy-email-badge" data-i18n="copy_email_badge">Copy Email ⧉</span>
               </button>
             </div>
           </div>
 
           <form id="form" class="contact-form reveal" action="https://formspree.io/f/mdovqere" method="post" novalidate>
             <div class="form-field">
-              <label class="sr-only" for="name">Full name</label>
-              <input id="name" name="name" type="text" maxlength="30" placeholder="Full name" autocomplete="name" required>
+              <label class="sr-only" for="name" data-i18n="form_name_label">Full name</label>
+              <input id="name" name="name" type="text" maxlength="30" placeholder="Full name" data-i18n-placeholder="form_name_placeholder" autocomplete="name" required>
             </div>
             <div class="form-field">
-              <label class="sr-only" for="email">Email address</label>
-              <input id="email" name="email" type="email" placeholder="Email address" autocomplete="email" required>
+              <label class="sr-only" for="email" data-i18n="form_email_label">Email address</label>
+              <input id="email" name="email" type="email" placeholder="Email address" data-i18n-placeholder="form_email_placeholder" autocomplete="email" required>
             </div>
             <div class="form-field">
-              <label class="sr-only" for="message">Your message</label>
-              <textarea id="message" name="message" maxlength="500" placeholder="Write me something..." rows="4" required></textarea>
+              <label class="sr-only" for="message" data-i18n="form_message_label">Your message</label>
+              <textarea id="message" name="message" maxlength="500" placeholder="Write me something..." data-i18n-placeholder="form_message_placeholder" rows="4" required></textarea>
             </div>
             <div class="form-actions">
-              <button class="btn magnetic" type="submit">Get in touch</button>
+              <button id="form-submit-btn" class="btn magnetic" type="submit" data-i18n="form_submit_btn">Get in touch</button>
               <p class="errText" id="form-feedback" role="alert" aria-live="polite"></p>
+              <div class="form-success-banner" id="form-success-banner" role="status" aria-live="polite" aria-hidden="true"></div>
             </div>
           </form>
         </div>
@@ -314,13 +482,15 @@
 
     <footer class="site-footer">
       <div class="footer-container">
-        <div class="footer-status-pill" aria-label="Availability and current local time in Morocco">
-          <span class="footer-status-dot" aria-hidden="true"></span>
-          <span class="footer-status-text">Available for Remote Work</span>
-          <span class="footer-status-divider" aria-hidden="true">•</span>
-          <span class="footer-time-wrapper">
-            Morocco • <time id="local-time-clock" class="footer-time-clock" datetime="">--:--</time>
-          </span>
+        <div class="footer-top-controls">
+          <div class="footer-status-pill" aria-label="Availability and current local time in Morocco">
+            <span class="footer-status-dot" aria-hidden="true"></span>
+            <span class="footer-status-text" data-i18n="footer_status">Available for Remote Work</span>
+            <span class="footer-status-divider" aria-hidden="true">•</span>
+            <span class="footer-time-wrapper">
+              <span data-i18n="footer_location">Morocco</span> • <time id="local-time-clock" class="footer-time-clock" datetime="">--:--</time>
+            </span>
+          </div>
         </div>
 
         <ul class="social-footer" aria-label="Footer social media links">
@@ -352,6 +522,17 @@
         </ul>
         <div class="footer-bottom-row">
           <p class="footer-copy">© <span id="current-year">2026</span> Ajrass Tajemouti. Built with vanilla HTML, CSS &amp; JS.</p>
+          <button
+            id="pwa-install-btn"
+            class="pwa-install-btn magnetic"
+            type="button"
+            aria-label="Install portfolio as an app"
+            title="Install Ajrass Portfolio (PWA)"
+            hidden
+          >
+            <span class="pwa-install-icon" aria-hidden="true">⬇</span>
+            <span class="pwa-install-text" data-i18n="pwa_install_btn">Install App</span>
+          </button>
           <button
             id="terminal-trigger"
             class="terminal-trigger magnetic"
@@ -441,13 +622,14 @@
       aria-labelledby="terminal-modal-title"
       aria-hidden="true"
     >
+      <canvas id="terminal-matrix-canvas" class="terminal-matrix-canvas" aria-hidden="true"></canvas>
       <div class="terminal-header">
         <div class="terminal-dots" aria-hidden="true">
           <span class="terminal-dot terminal-dot-red"></span>
           <span class="terminal-dot terminal-dot-amber"></span>
           <span class="terminal-dot terminal-dot-green"></span>
         </div>
-        <h3 id="terminal-modal-title" class="terminal-title">ajrass@portfolio: ~ (AjrassOS v1.0)</h3>
+        <h3 id="terminal-modal-title" class="terminal-title">ajrass@portfolio: ~ (AjrassOS v2.5)</h3>
         <button
           id="terminal-close"
           class="terminal-close"
@@ -467,18 +649,72 @@
             type="text"
             spellcheck="false"
             autocapitalize="off"
-            placeholder="Type 'help' and press Enter..."
+            placeholder="Type 'help' or press Tab..."
             aria-label="Terminal command input"
           >
         </form>
       </div>
+      <div class="terminal-chips-bar" aria-label="Quick-run terminal commands">
+        <span class="terminal-chips-label">Quick run:</span>
+        <button class="terminal-chip" type="button" data-terminal-cmd="neofetch">neofetch</button>
+        <button class="terminal-chip" type="button" data-terminal-cmd="achievements">trophies 🏆</button>
+        <button class="terminal-chip" type="button" data-terminal-cmd="snake">snake 🐍</button>
+        <button class="terminal-chip" type="button" data-terminal-cmd="type">type ⌨️</button>
+        <button class="terminal-chip" type="button" data-terminal-cmd="music">music ♪</button>
+        <button class="terminal-chip" type="button" data-terminal-cmd="matrix">matrix</button>
+        <button class="terminal-chip" type="button" data-terminal-cmd="party">party 🎉</button>
+        <button class="terminal-chip" type="button" data-terminal-cmd="sudo hire ajrass">sudo hire ajrass</button>
+      </div>
     </div>
 
+    <canvas id="confetti-canvas" class="confetti-canvas" aria-hidden="true"></canvas>
     <div id="overlay" aria-hidden="true"></div>
     <div id="toast-notification" class="toast-notification" role="status" aria-live="polite" aria-hidden="true">
       <span class="toast-icon" aria-hidden="true">✓</span>
       <span class="toast-message" id="toast-message">Email copied to clipboard ✓</span>
     </div>
+    <div id="achievement-toast" class="achievement-toast" role="status" aria-live="polite" aria-hidden="true">
+      <span class="achievement-toast-trophy" aria-hidden="true">🏆</span>
+      <div class="achievement-toast-body">
+        <span class="achievement-toast-eyebrow" id="achievement-toast-eyebrow">Achievement Unlocked • 1/6</span>
+        <strong class="achievement-toast-title" id="achievement-toast-title">Secret Found</strong>
+      </div>
+    </div>
+
+    <aside class="floating-controls-dock" id="floating-controls-dock" aria-label="Quick Theme Accent &amp; Blueprint Controls">
+      <button
+        id="floating-dock-trigger"
+        class="floating-dock-trigger magnetic"
+        type="button"
+        aria-expanded="false"
+        aria-controls="floating-dock-panel"
+        aria-label="Customize Accent Color &amp; Blueprint X-Ray Mode"
+        title="Accent Palette &amp; Blueprint X-Ray"
+      >
+        <span class="dock-trigger-swatch" aria-hidden="true"></span>
+      </button>
+      <div class="floating-dock-panel" id="floating-dock-panel" aria-hidden="true">
+        <div class="accent-picker" role="group" aria-label="Select accent color palette">
+          <button class="accent-dot is-active" type="button" data-accent-choice="orange" aria-label="Solar Orange accent" title="Solar Orange"></button>
+          <button class="accent-dot" type="button" data-accent-choice="cyan" aria-label="Cyber Cyan accent" title="Cyber Cyan"></button>
+          <button class="accent-dot" type="button" data-accent-choice="emerald" aria-label="Emerald Pulse accent" title="Emerald Pulse"></button>
+          <button class="accent-dot" type="button" data-accent-choice="violet" aria-label="Royal Violet accent" title="Royal Violet"></button>
+        </div>
+        <span class="dock-panel-divider" aria-hidden="true"></span>
+        <button
+          id="xray-toggle"
+          class="xray-toggle-btn"
+          type="button"
+          aria-pressed="false"
+          aria-label="Toggle Blueprint X-Ray wireframe mode (Shift+X)"
+          title="Toggle Blueprint X-Ray Mode (Shift + X)"
+        >
+          <span>⌗</span>
+          <span data-i18n="xray_btn_label">Blueprint</span>
+        </button>
+      </div>
+    </aside>
+
     <button
       id="back-to-top"
       class="back-to-top magnetic"
@@ -495,6 +731,141 @@
     <div id="cursor-ring" class="cursor-ring" aria-hidden="true">
       <span class="cursor-ring-label">View</span>
     </div>
+
+    <!-- Dedicated 1-Page Executive Print / PDF Resume Sheet (Visible only in @media print) -->
+    <section id="print-cv-sheet" class="print-cv-sheet" aria-hidden="true">
+      <header class="print-cv-header">
+        <div class="print-cv-title-block">
+          <h1 class="print-cv-name">Ajrass Tajemouti</h1>
+          <p class="print-cv-role">Full-Stack Software Engineer — React, TypeScript, Ruby on Rails &amp; Cloud Systems</p>
+        </div>
+        <div class="print-cv-contact-grid">
+          <span>tajemouti@gmail.com</span>
+          <span>github.com/tajemouti</span>
+          <span>linkedin.com/in/ajrass</span>
+          <span>tajemouti.github.io • Morocco (GMT+1)</span>
+        </div>
+      </header>
+
+      <div class="print-cv-body">
+        <div class="print-cv-main">
+          <section class="print-cv-section">
+            <h2 class="print-cv-heading">Executive Summary</h2>
+            <p class="print-cv-summary">
+              Results-driven Full-Stack Software Developer specializing in high-throughput web architectures, distributed backends, and responsive frontend systems. Proven track record designing composable e-commerce platforms, real-time telemetry dashboards, CRDT multiplayer workspaces, and ACID-compliant financial ledgers with clean, maintainable code and rigorous automated test coverage.
+            </p>
+          </section>
+
+          <section class="print-cv-section">
+            <h2 class="print-cv-heading">Selected Engineering Projects &amp; Case Studies</h2>
+
+            <article class="print-cv-item">
+              <div class="print-cv-item-head">
+                <strong>NexCart — Composable E-Commerce &amp; Merchant Analytics Suite</strong>
+                <span class="print-cv-stack">React • TypeScript • Ruby on Rails • PostgreSQL • Redis • Stripe API</span>
+              </div>
+              <ul class="print-cv-bullets">
+                <li>Architected a multi-vendor storefront and merchant intelligence dashboard with distributed Redis inventory locks and sub-50ms faceted product search.</li>
+                <li>Engineered an idempotent Stripe Connect webhook settlement pipeline achieving 99.98% payout reliability and real-time GMV cohort forecasting.</li>
+              </ul>
+            </article>
+
+            <article class="print-cv-item">
+              <div class="print-cv-item-head">
+                <strong>PulseMetrics — Real-Time Telemetry &amp; APM Observability Cloud</strong>
+                <span class="print-cv-stack">React • Node.js • TypeScript • TimescaleDB • WebSockets • Docker</span>
+              </div>
+              <ul class="print-cv-bullets">
+                <li>Built a streaming WebSocket ingestion pipeline processing 42,000+ telemetry spans/sec with backpressure control and automated P99 latency alerting.</li>
+                <li>Designed a high-density 60fps time-series visualization engine rendering 100K+ metrics points without browser frame drops.</li>
+              </ul>
+            </article>
+
+            <article class="print-cv-item">
+              <div class="print-cv-item-head">
+                <strong>FinFlow — Multi-Currency Treasury &amp; Immutable Double-Entry Ledger</strong>
+                <span class="print-cv-stack">Ruby on Rails • React • PostgreSQL • RSpec • Redis • REST API</span>
+              </div>
+              <ul class="print-cv-bullets">
+                <li>Enforced strict ACID double-entry accounting invariants in PostgreSQL with cryptographic audit trails and 98.6% RSpec domain test coverage.</li>
+                <li>Automated multi-currency FX liquidity rebalancing, programmable virtual card controls, and 12-month cash runway simulation.</li>
+              </ul>
+            </article>
+
+            <article class="print-cv-item">
+              <div class="print-cv-item-head">
+                <strong>CodeSync Live — CRDT Multiplayer Cloud IDE &amp; Sandbox Runner</strong>
+                <span class="print-cv-stack">TypeScript • React • Yjs CRDT • WebRTC • Node.js • Docker</span>
+              </div>
+              <ul class="print-cv-bullets">
+                <li>Delivered conflict-free multiplayer code editing across 25+ concurrent peers with sub-15ms delta sync over WebRTC/WebSockets and cgroup-isolated Docker execution.</li>
+              </ul>
+            </article>
+
+            <article class="print-cv-item">
+              <div class="print-cv-item-head">
+                <strong>DevGate API Hub &amp; CloudOps Kubernetes Canary Engine</strong>
+                <span class="print-cv-stack">TypeScript • Node.js • Redis • OpenAPI 3.1 • Docker • Prometheus</span>
+              </div>
+              <ul class="print-cv-bullets">
+                <li>Implemented a <2ms Redis token-bucket rate limiter, HMAC-SHA256 webhook dispatcher, and automated Kubernetes canary traffic shifting gated by Prometheus SLOs.</li>
+              </ul>
+            </article>
+          </section>
+        </div>
+
+        <aside class="print-cv-sidebar">
+          <section class="print-cv-section">
+            <h2 class="print-cv-heading">Technical Stack</h2>
+            <div class="print-cv-skill-group">
+              <strong>Languages</strong>
+              <p>JavaScript (ES6+), TypeScript, Ruby, SQL, HTML5, CSS3, Bash</p>
+            </div>
+            <div class="print-cv-skill-group">
+              <strong>Frameworks &amp; Libraries</strong>
+              <p>React.js, Ruby on Rails, Node.js, Express, GraphQL, Tailwind CSS, Bootstrap</p>
+            </div>
+            <div class="print-cv-skill-group">
+              <strong>Data &amp; Infrastructure</strong>
+              <p>PostgreSQL, Redis, TimescaleDB, Docker, Kubernetes, Git, GitHub Actions CI/CD, Linux CLI</p>
+            </div>
+            <div class="print-cv-skill-group">
+              <strong>Testing &amp; Quality</strong>
+              <p>RSpec, Capybara, Jest, TDD/BDD, OpenAPI 3.1, WCAG 2.1 AA Accessibility</p>
+            </div>
+          </section>
+
+          <section class="print-cv-section">
+            <h2 class="print-cv-heading">Core Competencies</h2>
+            <ul class="print-cv-list">
+              <li>Distributed Systems &amp; REST/GraphQL API Design</li>
+              <li>Real-Time WebSockets, WebRTC &amp; CRDT Sync</li>
+              <li>Database Indexing, ACID Transactions &amp; Caching</li>
+              <li>60fps Frontend Architecture &amp; Design Systems</li>
+              <li>Agile Delivery, Code Reviews &amp; Remote Collaboration</li>
+            </ul>
+          </section>
+
+          <section class="print-cv-section">
+            <h2 class="print-cv-heading">Education &amp; Training</h2>
+            <div class="print-cv-skill-group">
+              <strong>Full-Stack Web Development</strong>
+              <p>Microverse — Remote Software Engineering Program (1,500+ hrs pair programming, algorithms &amp; full-stack architecture)</p>
+            </div>
+          </section>
+
+          <section class="print-cv-section">
+            <h2 class="print-cv-heading">Languages</h2>
+            <ul class="print-cv-list">
+              <li><strong>English:</strong> Professional Working Proficiency</li>
+              <li><strong>French:</strong> Bilingual / Fluent Proficiency</li>
+              <li><strong>Arabic:</strong> Native Proficiency</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
