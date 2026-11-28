@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="55%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b00"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg3)"/>
+  <circle cx="400" cy="80" r="240" fill="#ff6b00" fill-opacity="0.12"/>
+  <!-- Kanban Board Container -->
+  <rect x="44" y="36" width="712" height="428" rx="16" fill="#0f172a" fill-opacity="0.92" stroke="#334155" stroke-width="1.5"/>
+  <!-- Top Command Bar -->
+  <rect x="64" y="56" width="672" height="42" rx="10" fill="#1e293b"/>
+  <rect x="80" y="67" width="22" height="20" rx="5" fill="url(#accent3)"/>
+  <text x="112" y="81" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="700">TaskForge AI — Sprint 24 Roadmap</text>
+  <rect x="572" y="65" width="148" height="24" rx="12" fill="#ff6b00" fill-opacity="0.2" stroke="#ff6b00"/>
+  <text x="646" y="81" fill="#ff9838" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">✦ AI Triage Active</text>
+
+  <!-- Column 1: Backlog -->
+  <rect x="64" y="114" width="212" height="328" rx="12" fill="#1e293b" fill-opacity="0.65" stroke="#334155"/>
+  <circle cx="84" cy="136" r="5" fill="#94a3b8"/>
+  <text x="98" y="140" fill="#cbd5e1" font-family="sans-serif" font-size="12" font-weight="700">BACKLOG (4)</text>
+  <rect x="78" y="156" width="184" height="82" rx="8" fill="#0f172a" stroke="#334155"/>
+  <rect x="90" y="168" width="54" height="14" rx="4" fill="#38bdf8" fill-opacity="0.2"/>
+  <text x="117" y="178" fill="#38bdf8" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">API</text>
+  <rect x="90" y="192" width="148" height="9" rx="4" fill="#e2e8f0"/>
+  <rect x="90" y="208" width="110" height="8" rx="4" fill="#64748b"/>
+
+  <rect x="78" y="250" width="184" height="82" rx="8" fill="#0f172a" stroke="#334155"/>
+  <rect x="90" y="262" width="68" height="14" rx="4" fill="#a855f7" fill-opacity="0.2"/>
+  <text x="124" y="272" fill="#c084fc" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">AI AGENT</text>
+  <rect x="90" y="286" width="154" height="9" rx="4" fill="#e2e8f0"/>
+  <rect x="90" y="302" width="96" height="8" rx="4" fill="#64748b"/>
+
+  <!-- Column 2: In Progress -->
+  <rect x="294" y="114" width="212" height="328" rx="12" fill="#1e293b" fill-opacity="0.65" stroke="#ff6b00" stroke-opacity="0.7"/>
+  <circle cx="314" cy="136" r="5" fill="#ff6b00"/>
+  <text x="328" y="140" fill="#ff9838" font-family="sans-serif" font-size="12" font-weight="700">IN PROGRESS (3)</text>
+  <rect x="308" y="156" width="184" height="96" rx="8" fill="#0f172a" stroke="#ff6b00"/>
+  <rect x="320" y="168" width="76" height="14" rx="4" fill="#ff6b00" fill-opacity="0.25"/>
+  <text x="358" y="178" fill="#ff9838" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">HIGH PRIORITY</text>
+  <rect x="320" y="192" width="152" height="9" rx="4" fill="#f8fafc"/>
+  <rect x="320" y="208" width="128" height="8" rx="4" fill="#94a3b8"/>
+  <!-- Progress Bar inside Card -->
+  <rect x="320" y="230" width="160" height="6" rx="3" fill="#1e293b"/>
+  <rect x="320" y="230" width="118" height="6" rx="3" fill="url(#accent3)"/>
+
+  <rect x="308" y="264" width="184" height="82" rx="8" fill="#0f172a" stroke="#334155"/>
+  <rect x="320" y="276" width="60" height="14" rx="4" fill="#10b981" fill-opacity="0.2"/>
+  <text x="350" y="286" fill="#34d399" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">CRDT SYNC</text>
+  <rect x="320" y="300" width="142" height="9" rx="4" fill="#e2e8f0"/>
+  <rect x="320" y="316" width="108" height="8" rx="4" fill="#64748b"/>
+
+  <!-- Column 3: Shipped -->
+  <rect x="524" y="114" width="212" height="328" rx="12" fill="#1e293b" fill-opacity="0.65" stroke="#334155"/>
+  <circle cx="544" cy="136" r="5" fill="#10b981"/>
+  <text x="558" y="140" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="700">SHIPPED (12)</text>
+  <rect x="538" y="156" width="184" height="82" rx="8" fill="#0f172a" stroke="#10b981" stroke-opacity="0.5"/>
+  <rect x="550" y="168" width="64" height="14" rx="4" fill="#10b981" fill-opacity="0.2"/>
+  <text x="582" y="178" fill="#34d399" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">DEPLOYED ✓</text>
+  <rect x="550" y="192" width="150" height="9" rx="4" fill="#e2e8f0"/>
+  <rect x="550" y="208" width="112" height="8" rx="4" fill="#64748b"/>
+</svg>

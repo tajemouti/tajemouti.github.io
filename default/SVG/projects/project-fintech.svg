@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" fill="none">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#064e3b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="cardGrad5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b00"/>
+      <stop offset="55%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="#090d16"/>
+  <rect width="800" height="500" fill="url(#bg5)"/>
+  <circle cx="200" cy="140" r="200" fill="#ff6b00" fill-opacity="0.14"/>
+  <!-- FinTech Dashboard Frame -->
+  <rect x="44" y="36" width="712" height="428" rx="16" fill="#0f172a" fill-opacity="0.92" stroke="#334155" stroke-width="1.5"/>
+  <!-- Virtual Corporate Card -->
+  <rect x="68" y="64" width="310" height="184" rx="16" fill="url(#cardGrad5)" stroke="#ff9838" stroke-opacity="0.6"/>
+  <text x="92" y="98" fill="#fff5e1" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">FINFLOW TREASURY</text>
+  <rect x="92" y="116" width="38" height="28" rx="5" fill="#fde68a" fill-opacity="0.85"/>
+  <text x="92" y="182" fill="#fff" font-family="monospace" font-size="17" font-weight="700" letter-spacing="2">4532 •••• •••• 8891</text>
+  <text x="92" y="222" fill="#fed7aa" font-family="sans-serif" font-size="11">LIQUIDITY POOL</text>
+  <text x="256" y="222" fill="#fff" font-family="sans-serif" font-size="18" font-weight="700">$284,500.00</text>
+
+  <!-- Right Cash-Flow Forecast Chart -->
+  <rect x="400" y="64" width="332" height="184" rx="14" fill="#1e293b" fill-opacity="0.7" stroke="#334155"/>
+  <text x="422" y="94" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="700">MULTI-CURRENCY RUNWAY (12 MO)</text>
+  <text x="422" y="122" fill="#34d399" font-family="sans-serif" font-size="20" font-weight="700">+18.4% Net Inflow</text>
+  <path d="M422 212 C465 205, 495 162, 540 172 C585 182, 615 135, 660 142 C685 146, 700 124, 712 118" stroke="#34d399" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="540" cy="172" r="5" fill="#0f172a" stroke="#34d399" stroke-width="3"/>
+  <circle cx="660" cy="142" r="5" fill="#0f172a" stroke="#34d399" stroke-width="3"/>
+
+  <!-- Bottom Double-Entry Ledger Table -->
+  <rect x="68" y="268" width="664" height="172" rx="14" fill="#1e293b" fill-opacity="0.6" stroke="#334155"/>
+  <text x="90" y="298" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="700">Immutable Ledger Settlement Stream</text>
+  <rect x="90" y="314" width="620" height="34" rx="8" fill="#0f172a"/>
+  <text x="108" y="335" fill="#e2e8f0" font-family="monospace" font-size="12">AWS Cloud Infrastructure</text>
+  <text x="420" y="335" fill="#94a3b8" font-family="monospace" font-size="11">USD → EUR (FX Locked)</text>
+  <text x="630" y="335" fill="#f8fafc" font-family="monospace" font-size="12" font-weight="700">-$4,290.00</text>
+
+  <rect x="90" y="358" width="620" height="34" rx="8" fill="#0f172a"/>
+  <text x="108" y="379" fill="#e2e8f0" font-family="monospace" font-size="12">Stripe Enterprise Payout #842</text>
+  <text x="420" y="379" fill="#34d399" font-family="monospace" font-size="11">ACH Instant Cleared</text>
+  <text x="626" y="379" fill="#34d399" font-family="monospace" font-size="12" font-weight="700">+$32,800.00</text>
+</svg>

@@ -1,192 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ajrass Tajemouti — Software Developer portfolio. Explore my projects, skills in JavaScript, Ruby on Rails, React.js, and get in touch.">
+    <meta name="author" content="Ajrass Tajemouti">
+    <meta property="og:title" content="Ajrass Tajemouti | Software Developer Portfolio">
+    <meta property="og:description" content="I can help you build a product, feature or website. Look through some of my work and experience!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tajemouti.github.io/">
+    <meta property="og:image" content="default/SVG/Snapshoot Portfolio.svg">
+    <link
+      id="dynamic-favicon"
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ff6b00'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-size='36' font-weight='800' fill='%23ffffff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Ajrass Portfolio</title>
+    <title>Ajrass Portfolio | Software Developer</title>
   </head>
   <body>
-    <header>
-      <div class="mobile-menu">
-        <div id="mobile-menu">
-          <a class="cancel" href="#">
-            <img src="default/SVG/Enabled.svg" alt="cancel">
-          </a>
-          <ul id="mobile-nav-bar">
-            <li class="mobile-nav-link">
-              <a href="#work-section">Portfolio</a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+      <div class="header-container" id="tool-bar">
+        <a class="logo" href="#hero-section" aria-label="Ajrass Home">
+          <span class="logo-mark" aria-hidden="true">A</span>
+          <span class="logo-text">Ajrass</span>
+        </a>
+
+        <nav id="nav-bar" class="site-nav" aria-label="Primary Navigation">
+          <ul class="nav-links" id="nav-links">
+            <li class="nav-item">
+              <a class="nav-link" data-scramble href="#projects-section">Projects</a>
             </li>
-            <hr class="menu-divider">
-            <li class="mobile-nav-link">
-              <a href="#about-me-section">About</a>
+            <li class="nav-item">
+              <a class="nav-link" data-scramble href="#about-me-section">About</a>
             </li>
-            <hr class="menu-divider">
-            <li class="mobile-nav-link">
-              <a href="#form-section">Contact</a>
+            <li class="nav-item">
+              <a class="nav-link" data-scramble href="#form-section">Contact</a>
             </li>
-            <hr class="menu-divider">
-          </ul>
-          <div class="menu-footer"><div class="bottom-line"></div></div>
-        </div>
-      </div>
-      <div id="tool-bar">
-        <div><a class="logo" href="#">Ajrass</a></div>
-        <a class="menu-icon" href="#"><img src="default/SVG/IconMenu.svg" alt="Menu Icon"></a>
-        <nav id="nav-bar">
-          <ul class="nav-links">
-            <li class="nav-link">
-              <a href="#work-section">Portfolio</a>
-            </li>
-            <li class="nav-link">
-              <a href="#about-me-section">About</a>
-            </li>
-            <li class="nav-link">
-              <a href="#form-section">Contact</a>
-            </li>
-            <li>
-              <a href="#"><img src="default/SVG/mail.svg" alt="mail"></a>
+            <li class="nav-item nav-mail-item">
+              <a class="nav-mail-link" href="#form-section" aria-label="Contact via email form">
+                <img src="default/SVG/mail.svg" alt="Mail icon">
+              </a>
             </li>
           </ul>
         </nav>
+
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark and light theme"
+            title="Toggle theme"
+          >
+            <span class="theme-icon-dark" aria-hidden="true">☾</span>
+            <span class="theme-icon-light" aria-hidden="true">☀</span>
+          </button>
+
+          <button
+            id="menu-toggle"
+            class="menu-icon"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <img src="default/SVG/IconMenu.svg" alt="Open menu">
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation Drawer">
+        <div class="mobile-menu-backdrop" id="mobile-menu-backdrop" tabindex="-1"></div>
+        <div class="mobile-menu-inner">
+          <div class="mobile-menu-header">
+            <a class="logo mobile-drawer-logo" href="#hero-section" aria-label="Ajrass Home">
+              <span class="logo-mark" aria-hidden="true">A</span>
+              <span class="logo-text">Ajrass</span>
+            </a>
+            <button
+              id="mobile-menu-close"
+              class="cancel"
+              type="button"
+              aria-label="Close navigation menu"
+            >
+              <img src="default/SVG/Enabled.svg" alt="Close menu">
+            </button>
+          </div>
+
+          <nav class="mobile-drawer-nav" aria-label="Mobile Navigation">
+            <p class="mobile-nav-eyebrow">Navigation</p>
+            <ul id="mobile-nav-bar" class="mobile-nav-list">
+              <li class="mobile-nav-link" style="--drawer-item-index: 0;">
+                <a class="mobile-drawer-link" href="#projects-section">
+                  <span class="mobile-link-index" aria-hidden="true">01</span>
+                  <span class="mobile-link-label">Projects</span>
+                  <span class="mobile-link-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li class="mobile-nav-link" style="--drawer-item-index: 1;">
+                <a class="mobile-drawer-link" href="#about-me-section">
+                  <span class="mobile-link-index" aria-hidden="true">02</span>
+                  <span class="mobile-link-label">About</span>
+                  <span class="mobile-link-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li class="mobile-nav-link" style="--drawer-item-index: 2;">
+                <a class="mobile-drawer-link" href="#form-section">
+                  <span class="mobile-link-index" aria-hidden="true">03</span>
+                  <span class="mobile-link-label">Contact</span>
+                  <span class="mobile-link-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="mobile-menu-footer" style="--drawer-item-index: 3;">
+            <div class="mobile-theme-row">
+              <span class="mobile-theme-label">Appearance</span>
+              <button
+                id="mobile-theme-toggle"
+                class="mobile-theme-switch"
+                type="button"
+                aria-label="Toggle dark and light theme"
+              >
+                <span class="theme-icon-dark" aria-hidden="true">☾</span>
+                <span class="theme-icon-light" aria-hidden="true">☀</span>
+                <span class="mobile-theme-mode-text" id="mobile-theme-text">Light</span>
+              </button>
+            </div>
+            <a class="btn-primary mobile-drawer-cta" href="#form-section">
+              <span>Let's Talk</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
-    <main>
-      <section id="hero-section" class="background">
-        <div  class="headline">
-          <h1 class="hello">Hey There.<br>I'm Ajrass.</h1>
-          <h2 class="iam">I'm a Software Developer</h2>
-          <p class="description">I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, 
-            don’t hesitate to contact me.
-          </p>
-          <ul class="social">
-            <li>
-              <a class="link" href="https://github.com/tajemouti" rel="noopener noreferrer" target="_blank">
-                <img src="default/SVG/IconGitHub.svg" alt="GitHub">
-              </a>
-            </li>
-            <li>
-              <a class="link" href="https://www.linkedin.com/in/ajrass" rel="noopener noreferrer" target="_blank">
-                <img src="default/SVG/Icon Linkedin.svg" alt="LinkedIn">
-              </a>
-            </li>
-            <li>
-              <a class="link" href="https://wellfound.com/u/ajrass-tajemouti" rel="noopener noreferrer" target="_blank">
-                <img src="default/SVG/IconAngelist.svg" alt="WellFound">
-              </a>
-            </li>
-            <li>
-              <a class="link" href="https://twitter.com/AjrassTajemouti" rel="noopener noreferrer" target="_blank">
-                <img src="default/SVG/IconTwitter.svg" alt="Twitter">
-              </a>
-            </li>
-            <li>
-              <a class="link" href="https://medium.com/@tajemouti/" rel="noopener noreferrer" target="_blank">
-                <img src="default/SVG/IconMedium.svg" alt="Medium">
-              </a>
-            </li>
-          </ul>
+
+    <main id="main-content">
+      <section id="hero-section" class="hero-section background" aria-labelledby="hero-title">
+        <canvas id="hero-particles" class="hero-particles" aria-hidden="true"></canvas>
+        <div class="hero-container">
+          <div class="headline">
+            <p class="hero-badge hero-animate" data-scramble style="--hero-delay: 0.05s;">Available for new opportunities</p>
+            <h1 id="hero-title" class="hello">
+              <span class="title-mask">
+                <span class="title-line" style="--line-delay: 0.12s;">Hey There.</span>
+              </span>
+              <span class="title-mask">
+                <span class="title-line" style="--line-delay: 0.24s;">I'm <span class="text-shimmer">Ajrass.</span></span>
+              </span>
+            </h1>
+            <h2 class="iam hero-animate" style="--hero-delay: 0.34s;">
+              <span id="hero-role-text" data-scramble>I'm a Software Developer</span>
+              <span class="role-cursor" aria-hidden="true"></span>
+            </h2>
+            <p class="description hero-animate" style="--hero-delay: 0.42s;">
+              I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.
+            </p>
+            <div class="hero-cta-group hero-animate" style="--hero-delay: 0.5s;">
+              <a class="btn-primary magnetic" href="#projects-section">View Projects</a>
+              <a class="btn-secondary magnetic" href="#form-section">Get in Touch</a>
+            </div>
+          </div>
+
+          <div class="hero-visual hero-animate" style="--hero-delay: 0.25s;" aria-hidden="true">
+            <picture class="hero-picture">
+              <source media="(min-width: 768px)" srcset="default/SVG/Illustration-header.svg">
+              <img
+                class="hero-illustration"
+                src="default/SVG/Illustration.svg"
+                alt=""
+              >
+            </picture>
+          </div>
+        </div>
+
+        <a class="scroll-indicator" href="#projects-section" aria-label="Scroll down to projects">
+          <span class="scroll-indicator-text">Scroll</span>
+          <span class="scroll-indicator-mouse" aria-hidden="true">
+            <span class="scroll-indicator-wheel"></span>
+          </span>
+        </a>
+      </section>
+
+      <section id="projects-section" class="work-section" aria-label="Featured Projects">
+        <div id="cards-grid"></div>
+      </section>
+
+      <section id="about-me-section" class="about-section" aria-labelledby="about-heading">
+        <div class="about-container">
+          <div class="about-header-grid">
+            <div class="about-intro reveal">
+              <h2 id="about-heading" class="about-me-heading heading-reveal">
+                <span class="heading-reveal-text">About me</span>
+              </h2>
+              <p class="about-me-description">
+                Hello I'm a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.
+              </p>
+              <a class="btn-primary larger magnetic" href="#form-section">Get my resume</a>
+            </div>
+
+            <div class="about-visual reveal" aria-hidden="true">
+              <picture class="about-picture">
+                <source media="(min-width: 1024px)" srcset="default/SVG/Frame2.svg">
+                <img
+                  class="about-illustration"
+                  src="default/SVG/Frame.svg"
+                  alt=""
+                >
+              </picture>
+            </div>
+          </div>
+
+          <div class="skills" aria-label="Technical Skills">
+            <article class="skill-card reveal" style="--stagger-index: 0;">
+              <div class="skill-heading">
+                <img src="default/SVG/Rectangle55.svg" alt="Diamond icon">
+                <h3>Language</h3>
+              </div>
+              <ul class="skill">
+                <li class="skill-list">JavaScript</li>
+                <li class="skill-list">Ruby</li>
+                <li class="skill-list">HTML</li>
+                <li class="skill-list">CSS</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal" style="--stagger-index: 1;">
+              <div class="skill-heading">
+                <img src="default/SVG/Rectangle56.svg" alt="Square icon">
+                <h3>Frameworks</h3>
+              </div>
+              <ul class="skill">
+                <li class="skill-list">React.js</li>
+                <li class="skill-list">Ruby on Rails</li>
+                <li class="skill-list">RSpec</li>
+                <li class="skill-list">Capybara</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal" style="--stagger-index: 2;">
+              <div class="skill-heading">
+                <img src="default/SVG/Rectangle57.svg" alt="Circle icon">
+                <h3>Skills</h3>
+              </div>
+              <ul class="skill">
+                <li class="skill-list">Database Management</li>
+                <li class="skill-list">Version Control</li>
+                <li class="skill-list">CLI</li>
+                <li class="skill-list">API Design</li>
+                <li class="skill-list">Web Development</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
-      <section id="work-section">
-        <div id="cards-grid">
+
+      <section id="form-section" class="contact-section" aria-labelledby="contact-heading">
+        <div class="contact-container">
+          <div class="contact-copy reveal">
+            <span class="section-eyebrow">Let's Connect</span>
+            <h2 id="contact-heading" class="form-heading heading-reveal">
+              <span class="heading-reveal-text">
+                I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
+              </span>
+            </h2>
+            <div class="contact-quick-actions">
+              <button
+                id="copy-email-btn"
+                class="copy-email-pill magnetic"
+                type="button"
+                data-email="tajemouti@gmail.com"
+                aria-label="Copy email address tajemouti@gmail.com to clipboard"
+              >
+                <span class="copy-email-dot" aria-hidden="true"></span>
+                <span class="copy-email-address">tajemouti@gmail.com</span>
+                <span class="copy-email-badge" id="copy-email-badge">Copy Email ⧉</span>
+              </button>
+            </div>
+          </div>
+
+          <form id="form" class="contact-form reveal" action="https://formspree.io/f/mdovqere" method="post" novalidate>
+            <div class="form-field">
+              <label class="sr-only" for="name">Full name</label>
+              <input id="name" name="name" type="text" maxlength="30" placeholder="Full name" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label class="sr-only" for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="Email address" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label class="sr-only" for="message">Your message</label>
+              <textarea id="message" name="message" maxlength="500" placeholder="Write me something..." rows="4" required></textarea>
+            </div>
+            <div class="form-actions">
+              <button class="btn magnetic" type="submit">Get in touch</button>
+              <p class="errText" id="form-feedback" role="alert" aria-live="polite"></p>
+            </div>
+          </form>
         </div>
-      </section>
-      <section id="about-me-section">
-        <h2 class="about-me-heading">About me</h2>
-        <p class="about-me-description">Hello I'm a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
-        <button class="larger" type="button">Get my resume</button>
-        <hr class="line">
-        <section class="skills">
-          <div>
-            <span class="skill-heading">
-              <img src="default/SVG/Rectangle55.svg" alt="shape">
-              <h3>Language</h3>
-            </span>
-            <ul class="skill">
-              <li class="skill-list">JavaScript</li>
-              <li class="skill-list">Ruby</li>
-              <li class="skill-list">HTML</li>
-              <li class="skill-list">CSS</li>
-            </ul>
-          </div>
-          <div>
-            <span class="skill-heading">
-              <img src="default/SVG/Rectangle56.svg" alt="shape">
-              <h3>Frameworks</h3>
-            </span>
-            <ul class="skill">
-              <li class="skill-list">React.js</li>
-              <li class="skill-list">Ruby on Rails</li>
-              <li class="skill-list">RSpec</li>
-              <li class="skill-list">Capybara</li>
-            </ul>
-          </div>
-          <div>
-            <span class="skill-heading">
-              <img src="default/SVG/Rectangle57.svg" alt="shape">
-              <h3>Skills</h3>
-            </span>
-            <ul class="skill">
-              <li class="skill-list">Database Management</li>
-              <li class="skill-list">Version Control</li>
-              <li class="skill-list">CLI</li>
-              <li class="skill-list">API Design</li>
-              <li class="skill-list">Web Development</li>
-            </ul>
-          </div>
-        </section>
-      </section>
-      <section id="form-section">
-        <h2 class="form-heading">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
-        <form id="form" action="https://formspree.io/f/mdovqere" method="post">
-          <label for="name">
-            <input id="name" name="name" type="text" maxlength="30" placeholder="Full name" required>
-          </label>
-          <label for="email">
-            <input id="email" name="email" type="email" placeholder="Email address" required>
-          </label>
-          <label for="message">
-            <textarea id="message" name="message" maxlength="500" placeholder="Write me something..." required></textarea>
-          </label>
-          <button class="btn" type="submit">Get in touch</button>
-          <p class="errText"></p>
-        </form>
       </section>
     </main>
-    <footer>
-      <ul class="social-footer">
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-status-pill" aria-label="Availability and current local time in Morocco">
+          <span class="footer-status-dot" aria-hidden="true"></span>
+          <span class="footer-status-text">Available for Remote Work</span>
+          <span class="footer-status-divider" aria-hidden="true">•</span>
+          <span class="footer-time-wrapper">
+            Morocco • <time id="local-time-clock" class="footer-time-clock" datetime="">--:--</time>
+          </span>
+        </div>
+
+        <ul class="social-footer" aria-label="Footer social media links">
+          <li>
+            <a class="link" href="https://github.com/tajemouti" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
+              <img class="color" src="default/SVG/Disabled1.svg" alt="GitHub">
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://www.linkedin.com/in/ajrass" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+              <img src="default/SVG/Disabled2.svg" alt="LinkedIn">
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://wellfound.com/u/ajrass-tajemouti" rel="noopener noreferrer" target="_blank" aria-label="WellFound">
+              <img src="default/SVG/Disabled3.svg" alt="WellFound">
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://twitter.com/AjrassTajemouti" rel="noopener noreferrer" target="_blank" aria-label="Twitter">
+              <img src="default/SVG/Disabled4.svg" alt="Twitter">
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://medium.com/@tajemouti/" rel="noopener noreferrer" target="_blank" aria-label="Medium">
+              <img src="default/SVG/Disabled5.svg" alt="Medium">
+            </a>
+          </li>
+        </ul>
+        <div class="footer-bottom-row">
+          <p class="footer-copy">© <span id="current-year">2026</span> Ajrass Tajemouti. Built with vanilla HTML, CSS &amp; JS.</p>
+          <button
+            id="terminal-trigger"
+            class="terminal-trigger magnetic"
+            type="button"
+            aria-label="Open interactive terminal"
+            title="Launch AjrassOS Terminal (>_)"
+          >
+            <span class="terminal-trigger-icon" aria-hidden="true">&gt;_</span>
+            <span class="terminal-trigger-text">Terminal</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <aside class="floating-social" id="floating-social" aria-label="Floating social media links">
+      <ul class="social">
         <li>
-          <a class="link" href="https://github.com/tajemouti" rel="noopener noreferrer" target="_blank">
-            <img class="color" src="default/SVG/Disabled1.svg" alt="GitHub">
+          <a
+            class="link"
+            href="https://github.com/tajemouti"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="GitHub profile"
+            data-tooltip="GitHub"
+          >
+            <img src="default/SVG/IconGitHub.svg" alt="GitHub">
           </a>
         </li>
         <li>
-          <a class="link" href="https://www.linkedin.com/in/ajrass" rel="noopener noreferrer" target="_blank">
-            <img src="default/SVG/Disabled2.svg" alt="LinkedIn">
+          <a
+            class="link"
+            href="https://www.linkedin.com/in/ajrass"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="LinkedIn profile"
+            data-tooltip="LinkedIn"
+          >
+            <img src="default/SVG/Icon Linkedin.svg" alt="LinkedIn">
           </a>
         </li>
         <li>
-          <a class="link" href="https://wellfound.com/u/ajrass-tajemouti" rel="noopener noreferrer" target="_blank">
-            <img src="default/SVG/Disabled3.svg" alt="WellFound">
+          <a
+            class="link"
+            href="https://wellfound.com/u/ajrass-tajemouti"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="Wellfound profile"
+            data-tooltip="Wellfound"
+          >
+            <img src="default/SVG/IconAngelist.svg" alt="WellFound">
           </a>
         </li>
         <li>
-          <a class="link" href="https://twitter.com/AjrassTajemouti" rel="noopener noreferrer" target="_blank">
-            <img src="default/SVG/Disabled4.svg" alt="Twitter">
+          <a
+            class="link"
+            href="https://twitter.com/AjrassTajemouti"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="Twitter profile"
+            data-tooltip="Twitter"
+          >
+            <img src="default/SVG/IconTwitter.svg" alt="Twitter">
           </a>
         </li>
         <li>
-          <a class="link" href="https://medium.com/@tajemouti/" rel="noopener noreferrer" target="_blank">
-            <img src="default/SVG/Disabled5.svg" alt="Medium">
+          <a
+            class="link"
+            href="https://medium.com/@tajemouti/"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="Medium blog"
+            data-tooltip="Medium"
+          >
+            <img src="default/SVG/IconMedium.svg" alt="Medium">
           </a>
         </li>
       </ul>
-      <div class="bottom-line"></div>
-    </footer>
+    </aside>
+
     <div id="modals-container"></div>
-    <div id="overlay"></div>
+
+    <div
+      id="terminal-modal"
+      class="terminal-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="terminal-modal-title"
+      aria-hidden="true"
+    >
+      <div class="terminal-header">
+        <div class="terminal-dots" aria-hidden="true">
+          <span class="terminal-dot terminal-dot-red"></span>
+          <span class="terminal-dot terminal-dot-amber"></span>
+          <span class="terminal-dot terminal-dot-green"></span>
+        </div>
+        <h3 id="terminal-modal-title" class="terminal-title">ajrass@portfolio: ~ (AjrassOS v1.0)</h3>
+        <button
+          id="terminal-close"
+          class="terminal-close"
+          type="button"
+          aria-label="Close interactive terminal"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div id="terminal-body" class="terminal-body" tabindex="0" aria-live="polite">
+        <div id="terminal-output" class="terminal-output"></div>
+        <form id="terminal-form" class="terminal-input-row" autocomplete="off">
+          <label for="terminal-input" class="terminal-prompt">ajrass@dev:~$</label>
+          <input
+            id="terminal-input"
+            class="terminal-input"
+            type="text"
+            spellcheck="false"
+            autocapitalize="off"
+            placeholder="Type 'help' and press Enter..."
+            aria-label="Terminal command input"
+          >
+        </form>
+      </div>
+    </div>
+
+    <div id="overlay" aria-hidden="true"></div>
+    <div id="toast-notification" class="toast-notification" role="status" aria-live="polite" aria-hidden="true">
+      <span class="toast-icon" aria-hidden="true">✓</span>
+      <span class="toast-message" id="toast-message">Email copied to clipboard ✓</span>
+    </div>
+    <button
+      id="back-to-top"
+      class="back-to-top magnetic"
+      type="button"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <svg class="back-to-top-svg" viewBox="0 0 44 44" width="44" height="44" aria-hidden="true">
+        <circle class="back-to-top-track" cx="22" cy="22" r="19"></circle>
+        <circle class="back-to-top-progress" id="back-to-top-progress" cx="22" cy="22" r="19"></circle>
+      </svg>
+      <span class="back-to-top-arrow" aria-hidden="true">↑</span>
+    </button>
+    <div id="cursor-ring" class="cursor-ring" aria-hidden="true">
+      <span class="cursor-ring-label">View</span>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

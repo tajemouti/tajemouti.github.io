@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" fill="none">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b00"/>
+      <stop offset="100%" stop-color="#ff9838"/>
+    </linearGradient>
+    <linearGradient id="chartFill1" x1="0" y1="180" x2="0" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6b00" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff6b00" stop-opacity="0.0"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="75%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#ff6b00" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ff6b00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg1)"/>
+  <rect width="800" height="500" fill="url(#glow1)"/>
+  <!-- Subtle Grid -->
+  <g stroke="#334155" stroke-opacity="0.3" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="160" y1="0" x2="160" y2="500"/>
+    <line x1="320" y1="0" x2="320" y2="500"/>
+    <line x1="480" y1="0" x2="480" y2="500"/>
+    <line x1="640" y1="0" x2="640" y2="500"/>
+  </g>
+  <!-- App Window Frame -->
+  <rect x="48" y="36" width="704" height="428" rx="16" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.5"/>
+  <rect x="48" y="36" width="704" height="40" rx="16" fill="#1e293b"/>
+  <circle cx="74" cy="56" r="6" fill="#ef4444"/>
+  <circle cx="94" cy="56" r="6" fill="#f59e0b"/>
+  <circle cx="114" cy="56" r="6" fill="#10b981"/>
+  <rect x="260" y="46" width="280" height="20" rx="6" fill="#0f172a"/>
+  <text x="400" y="60" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle">nexcart.app/admin/analytics</text>
+  <!-- Left Sidebar -->
+  <rect x="64" y="92" width="130" height="354" rx="10" fill="#1e293b" fill-opacity="0.55"/>
+  <rect x="78" y="110" width="84" height="14" rx="4" fill="url(#orangeGrad1)"/>
+  <rect x="78" y="142" width="100" height="10" rx="4" fill="#475569"/>
+  <rect x="78" y="166" width="88" height="10" rx="4" fill="#334155"/>
+  <rect x="78" y="190" width="96" height="10" rx="4" fill="#334155"/>
+  <rect x="78" y="214" width="74" height="10" rx="4" fill="#334155"/>
+  <!-- Top KPI Cards -->
+  <rect x="212" y="92" width="164" height="84" rx="10" fill="#1e293b" stroke="#334155"/>
+  <text x="228" y="116" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="600">GROSS REVENUE</text>
+  <text x="228" y="146" fill="#f8fafc" font-family="sans-serif" font-size="22" font-weight="700">$148,920</text>
+  <rect x="228" y="156" width="54" height="12" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="255" y="165" fill="#34d399" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">+24.8%</text>
+
+  <rect x="390" y="92" width="164" height="84" rx="10" fill="#1e293b" stroke="#ff6b00" stroke-opacity="0.6"/>
+  <text x="406" y="116" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="600">ACTIVE ORDERS</text>
+  <text x="406" y="146" fill="#ff9838" font-family="sans-serif" font-size="22" font-weight="700">1,842</text>
+  <rect x="406" y="156" width="62" height="12" rx="6" fill="#ff6b00" fill-opacity="0.2"/>
+  <text x="437" y="165" fill="#ff9838" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">99.4% SLA</text>
+
+  <rect x="568" y="92" width="164" height="84" rx="10" fill="#1e293b" stroke="#334155"/>
+  <text x="584" y="116" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="600">CONVERSION</text>
+  <text x="584" y="146" fill="#38bdf8" font-family="sans-serif" font-size="22" font-weight="700">4.72%</text>
+  <rect x="584" y="156" width="50" height="12" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
+  <text x="609" y="165" fill="#38bdf8" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">+1.1%</text>
+
+  <!-- Main Revenue Area Chart -->
+  <rect x="212" y="192" width="342" height="254" rx="12" fill="#1e293b" fill-opacity="0.75" stroke="#334155"/>
+  <text x="232" y="220" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="700">Real-Time Checkout Volume</text>
+  <path d="M232 370 L275 335 L320 348 L365 288 L410 302 L455 245 L500 258 L534 218 L534 410 L232 410 Z" fill="url(#chartFill1)"/>
+  <path d="M232 370 L275 335 L320 348 L365 288 L410 302 L455 245 L500 258 L534 218" stroke="url(#orangeGrad1)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="365" cy="288" r="5" fill="#0f172a" stroke="#ff6b00" stroke-width="3"/>
+  <circle cx="455" cy="245" r="5" fill="#0f172a" stroke="#ff6b00" stroke-width="3"/>
+  <circle cx="534" cy="218" r="6" fill="#ff6b00" stroke="#fff" stroke-width="2"/>
+
+  <!-- Right Product / Stripe Settlement Card -->
+  <rect x="568" y="192" width="164" height="254" rx="12" fill="#1e293b" fill-opacity="0.75" stroke="#334155"/>
+  <text x="584" y="220" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="700">Live Inventory</text>
+  <rect x="584" y="236" width="132" height="52" rx="8" fill="#0f172a" stroke="#334155"/>
+  <circle cx="604" cy="262" r="12" fill="#ff6b00" fill-opacity="0.25"/>
+  <rect x="624" y="250" width="76" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="624" y="266" width="48" height="8" rx="4" fill="#ff9838"/>
+
+  <rect x="584" y="298" width="132" height="52" rx="8" fill="#0f172a" stroke="#334155"/>
+  <circle cx="604" cy="324" r="12" fill="#38bdf8" fill-opacity="0.25"/>
+  <rect x="624" y="312" width="68" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="624" y="328" width="54" height="8" rx="4" fill="#38bdf8"/>
+
+  <rect x="584" y="366" width="132" height="36" rx="8" fill="url(#orangeGrad1)"/>
+  <text x="650" y="388" fill="#fff" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">Stripe Verified ✓</text>
+</svg>
