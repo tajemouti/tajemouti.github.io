@@ -221,6 +221,8 @@
 }
 
 html {
+  max-width: 100%;
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
   scrollbar-width: thin;
@@ -267,9 +269,16 @@ main section[id] {
   scroll-margin-top: 0;
 }
 
+#main-content {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 body {
   position: relative;
   width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   font-family: var(--font-sans);
   font-size: 16px;
@@ -284,6 +293,7 @@ body {
     );
   background-attachment: fixed;
   overflow-x: hidden;
+  overflow-x: clip;
   transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
 }
 
@@ -367,11 +377,14 @@ button {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
+  max-width: 100%;
   height: var(--header-height);
   background-color: var(--bg-header);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-color);
+  box-sizing: border-box;
   z-index: 50;
   transition: background-color var(--transition-base), border-color var(--transition-base);
 }
@@ -391,6 +404,7 @@ button {
 }
 
 .header-container {
+  width: 100%;
   max-width: var(--container-max);
   height: 100%;
   margin: 0 auto;
@@ -398,12 +412,16 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
+  flex-shrink: 0;
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 20px;
@@ -507,6 +525,8 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+  flex-shrink: 0;
 }
 
 .header-action-pill {
@@ -837,6 +857,8 @@ button {
 
 .mobile-pref-actions {
   display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
   gap: 6px;
 }
@@ -1850,6 +1872,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 56px;
+  overflow-x: clip;
 }
 
 /* Subtle Architectural Dot-Matrix Pattern behind Projects */
@@ -1857,9 +1880,9 @@ button {
   content: '';
   position: absolute;
   top: 0;
-  right: -10vw;
+  right: 0;
   bottom: 0;
-  left: -10vw;
+  left: 0;
   background-image: radial-gradient(var(--pattern-dot-color) 1.25px, transparent 1.25px);
   background-size: 26px 26px;
   mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, #000 30%, transparent 85%);
@@ -2750,18 +2773,20 @@ button {
    ========================================================================== */
 .contact-section {
   position: relative;
+  width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 110px 24px;
+  overflow-x: clip;
 }
 
 .contact-section::before {
   content: '';
   position: absolute;
   top: 0;
-  right: -10vw;
+  right: 0;
   bottom: 0;
-  left: -10vw;
+  left: 0;
   background-image: radial-gradient(var(--pattern-dot-color) 1.25px, transparent 1.25px);
   background-size: 28px 28px;
   mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 20%, transparent 80%);
@@ -4326,6 +4351,27 @@ textarea:focus {
 }
 
 @media (max-width: 767px) {
+  .header-container {
+    padding: 12px 16px;
+  }
+
+  /* Hide secondary header controls already inside the Mobile Drawer */
+  #lang-toggle,
+  #sound-toggle {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .header-icon-btn,
+  .theme-toggle,
+  .menu-icon {
+    width: 36px;
+    height: 36px;
+  }
+
   .scroll-indicator {
     display: none;
   }
@@ -4358,6 +4404,17 @@ textarea:focus {
 
   .carousel-dots {
     display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .music-jukebox-popover {
+    position: fixed;
+    top: calc(var(--header-height) + 8px);
+    right: 12px;
+    left: auto;
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
   }
 }
 
